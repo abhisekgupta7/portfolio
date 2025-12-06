@@ -132,7 +132,7 @@ const Footer = () => {
                                     </div>
                                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
                                         <Calendar className="h-3.5 w-3.5" />
-                                        <span>Full-time, Contract</span>
+                                        <span>Part-time, Contract</span>
                                     </div>
                                     <Link 
                                         href="#contact" 
