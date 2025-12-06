@@ -22,11 +22,11 @@ const techStack = [
   { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2d3748" },
   {
     name: "Drizzle ORM",
-    icon: "https://raw.githubusercontent.com/drizzle-team/drizzle-orm/main/.github/assets/drizzle-logo-light.png",
+    icon: "https://cdn.simpleicons.org/drizzle/C5F74F",
   },
   {
     name: "Neon DB",
-    icon: "https://neon.tech/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fneon-logo.5f4e2f6b.png&w=256&q=75",
+    icon: "https://avatars.githubusercontent.com/u/77690634",
   },
   { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/ffffff" },
 ];
@@ -394,11 +394,10 @@ export default function Home() {
                     View Live Project
                     <ArrowRight className="h-4 w-4" />
                   </Link>
-                 
+                </div>
               </div>
             </div>
-            </div>
-            </div>
+          </div>
         </div>
       </section>
 
