@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  turbopack: {
+    root: process.cwd(),
+  },
   images: {
     remotePatterns: [
       {
@@ -22,8 +25,7 @@ const nextConfig: NextConfig = {
     ],
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    unoptimized: false,
-    formats: ["image/webp", "image/avif"],
+    unoptimized: true,
   },
   poweredByHeader: false,
   compress: true,
