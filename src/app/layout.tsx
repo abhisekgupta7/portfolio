@@ -27,7 +27,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL || "https://www.abhisekgupta.me"
+    process.env.NEXT_PUBLIC_APP_URL || "https://www.abhisekgupta.me",
   ),
   title: {
     default: "Abhisek Gupta - Full-Stack Next.js Developer | SaaS Builder",
@@ -36,6 +36,10 @@ export const metadata: Metadata = {
   description:
     "Full-Stack Developer specializing in Next.js, React, and TypeScript. Building modern web applications, SaaS products, and AI-powered solutions.",
   keywords: [
+    "Abhisek",
+    "Abhishek",
+    "Abhisek Gupta",
+    "Abhishek Gupta",
     "Next.js",
     "React",
     "TypeScript",

@@ -1,10 +1,22 @@
-export const metadata = {
+import { Metadata } from "next";
+export const metadata: Metadata = {
   title:
     "Abhisek Gupta - Full-Stack Next.js Developer | SaaS Builder | AI Enthusiast",
   description:
     "Full-Stack Developer specializing in modern web applications with Next.js, React, TypeScript. Building SaaS products and AI-powered solutions. Available for freelance projects and full-time opportunities.",
-  keywords:
-    "Next.js developer, Full-stack developer, React, TypeScript, SaaS, Web Development, Freelance",
+  keywords: [
+    "Abhisek",
+    "Abhishek",
+    "Abhisek Gupta",
+    "Abhishek Gupta",
+    "Next.js developer",
+    "Full-stack developer",
+    "React",
+    "TypeScript",
+    "SaaS",
+    "Web Development",
+    "Freelance",
+  ],
   authors: [{ name: "Abhisek Gupta" }],
   openGraph: {
     type: "website",
@@ -293,7 +305,7 @@ export default function Home() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-5 pt-4">
                   <a
-                    href="mailto:rasura833@gmail.com"
+                    href="mailto:abhisekgupta.dev@gmail.com"
                     className="group flex flex-col space-y-2 rounded-lg md:rounded-xl border border-border/60 bg-background/50 p-4 md:p-5 hover:bg-background/80 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300"
                   >
                     <div className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
@@ -301,7 +313,7 @@ export default function Home() {
                     </div>
                     <h3 className="text-base md:text-lg font-medium">Email</h3>
                     <p className="text-xs md:text-sm text-muted-foreground group-hover:text-foreground transition-colors break-all">
-                      rasura833@gmail.com
+                      abhisekgupta.dev@gmail.com
                     </p>
                   </a>
 
