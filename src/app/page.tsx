@@ -1,37 +1,38 @@
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title:
-    "Abhisek Gupta - Full-Stack Next.js Developer | SaaS Builder | AI Enthusiast",
+    "Abhisek Gupta - Product-Focused Software Engineer | Backend & API Design",
   description:
-    "Full-Stack Developer specializing in modern web applications with Next.js, React, TypeScript. Building SaaS products and AI-powered solutions. Available for freelance projects and full-time opportunities.",
+    "Software Engineer specializing in backend systems, API design, database architecture, authentication, and production-grade web platforms. Building reliable, secure systems with Node.js, PostgreSQL, and modern deployment pipelines.",
   keywords: [
     "Abhisek",
     "Abhishek",
     "Abhisek Gupta",
     "Abhishek Gupta",
-    "Next.js developer",
+    "Backend Engineer",
+    "Software Engineer",
+    "API Design",
+    "Node.js",
+    "PostgreSQL",
+    "System Architecture",
     "Full-stack developer",
-    "React",
-    "TypeScript",
-    "SaaS",
-    "Web Development",
-    "Freelance",
+    "Database Design",
   ],
   authors: [{ name: "Abhisek Gupta" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://yourportfolio.com",
-    title: "Abhisek Gupta - Full-Stack Next.js Developer",
+    title: "Abhisek Gupta - Backend & Systems Engineer",
     description:
-      "Full-Stack Developer specializing in modern web applications with Next.js, React, TypeScript.",
+      "Building reliable, secure backend systems and production-grade web platforms with strong API design and data modeling.",
     siteName: "Abhisek Gupta Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhisek Gupta - Full-Stack Next.js Developer",
+    title: "Abhisek Gupta - Backend & Systems Engineer",
     description:
-      "Full-Stack Developer specializing in modern web applications.",
+      "Building reliable backend systems with API design, database architecture, and production deployment expertise.",
   },
 };
 
@@ -50,32 +51,41 @@ import Link from "next/link";
 import TechStack from "@/components/TechStack";
 
 const techStack = [
-  { name: "React", icon: "https://cdn.simpleicons.org/react/61dafb" },
-  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
-  {
-    name: "Tailwind CSS",
-    icon: "https://cdn.simpleicons.org/tailwindcss/38bdf8",
-  },
-  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178c6" },
+  // Backend Engineering (Primary)
   { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/6cc24a" },
   { name: "Express", icon: "https://cdn.simpleicons.org/express/ffffff" },
-  { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/10aa50" },
-  {
-    name: "shadcn/ui",
-    icon: "https://api.iconify.design/simple-icons:shadcnui.svg?color=white",
-  },
-  { name: "Clerk", icon: "https://cdn.simpleicons.org/clerk/6C47FF" },
   { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/31648c" },
   { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2d3748" },
   {
     name: "Drizzle ORM",
     icon: "https://cdn.simpleicons.org/drizzle/C5F74F",
   },
+  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178c6" },
+
+  // Systems & Integrations
+  { name: "Stripe", icon: "https://cdn.simpleicons.org/stripe/008CDD" },
+  { name: "Clerk", icon: "https://cdn.simpleicons.org/clerk/6C47FF" },
   {
     name: "Neon DB",
     icon: "https://avatars.githubusercontent.com/u/77690634",
   },
+  { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/10aa50" },
+
+  // Supporting Frontend
+  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+  { name: "React", icon: "https://cdn.simpleicons.org/react/61dafb" },
+  {
+    name: "Tailwind CSS",
+    icon: "https://cdn.simpleicons.org/tailwindcss/38bdf8",
+  },
+  {
+    name: "shadcn/ui",
+    icon: "https://api.iconify.design/simple-icons:shadcnui.svg?color=white",
+  },
+
+  // DevOps & Deployment
   { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/ffffff" },
+  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/ffffff" },
 ];
 
 export default function Home() {
@@ -101,13 +111,16 @@ export default function Home() {
                 </span>
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-3xl font-medium tracking-tight text-muted-foreground">
-                <span className="text-foreground">Full-Stack Developer</span> |
-                SaaS Builder | AI Enthusiast
+                <span className="text-foreground">
+                  Product-Focused Software Engineer
+                </span>
+                <br className="hidden sm:block" />
+                <span className="text-foreground">(Backend Leaning)</span>
               </h2>
               <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-prose leading-relaxed">
-                I craft modern web applications with Next.js. Specialized in
-                building seamless user experiences with latest tech used in
-                industry.
+                Building reliable, secure backend systems and production-grade
+                web platforms with strong API design, data modeling,
+                authentication, and real-world failure handling.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
                 <Link
@@ -121,7 +134,7 @@ export default function Home() {
                   download
                   className="px-6 py-3 rounded-md border border-input hover:bg-accent hover:text-accent-foreground transition group flex items-center justify-center gap-2"
                 >
-                  Download Resume
+                  Download CV
                   <Download className="h-4 w-4 group-hover:translate-y-[-2px] transition-transform" />
                 </a>
               </div>
@@ -174,40 +187,86 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
             {[
               {
-                title: "Ecom",
-                description:
-                  "A Ecommerce platform for merchant to list products and users to explore them seamlessly.",
-                image: "/ecom.png",
-                tags: [
-                  "Next.js",
-                  "Neon",
-                  "Drizzle ORM",
-                  "shadcn/ui",
-                  "ImageKit",
-                ],
-                link: "https://ecommerce-eta-one-33.vercel.app/",
-              },
-              {
                 title: "Everything",
+                role: "Led backend architecture for authentication, payments, and transactional workflows",
+                problem:
+                  "Designed a system to support secure payments, multi-role access, and data integrity under concurrent use",
                 description:
-                  "Ai summary generator project with all latest industry standard tech stack.",
+                  "Enterprise-grade full-stack system with production-ready backend infrastructure",
                 image: "/everything.png",
+                backendDetails: [
+                  "Auth: JWT + role-based access control (RBAC)",
+                  "Data: PostgreSQL schema with indexes for performance",
+                  "Integrations: Stripe with idempotent webhook handling",
+                  "APIs: REST endpoints with structured error responses",
+                ],
+                deployment:
+                  "Production CI/CD with environment config and secure secrets management",
+                outcome:
+                  "Production-ready backend supporting secure user flows and trackable analytics",
                 tags: [
                   "Next.js",
                   "Stripe",
                   "Neon DB",
                   "Drizzle ORM",
-                  "shadcn/ui",
-                  "Clerk",
+                  "Clerk Auth",
+                  "PostgreSQL",
                 ],
                 link: "https://everything-eight-bice.vercel.app/",
               },
               {
-                title: "SaaSKit",
+                title: "Ecom",
+                role: "Designed backend API and database architecture for product catalog and user transactions",
+                problem:
+                  "Built scalable e-commerce infrastructure handling product listings, inventory, and secure checkout flows",
                 description:
-                  "A demo saaskit for SaaS businesses with analytics, user management and subscription tracking.",
+                  "E-commerce platform with robust backend for merchants and seamless customer experience",
+                image: "/ecom.png",
+                backendDetails: [
+                  "Data: Normalized PostgreSQL schema with relational integrity",
+                  "APIs: RESTful endpoints for product CRUD and order management",
+                  "Storage: ImageKit integration for optimized media delivery",
+                  "Query optimization: Drizzle ORM with indexed lookups",
+                ],
+                deployment:
+                  "Serverless deployment with edge caching and CDN integration",
+                outcome:
+                  "Scalable platform supporting merchant operations and high-traffic customer browsing",
+                tags: [
+                  "Next.js",
+                  "Neon DB",
+                  "Drizzle ORM",
+                  "PostgreSQL",
+                  "ImageKit",
+                  "shadcn/ui",
+                ],
+                link: "https://ecommerce-eta-one-33.vercel.app/",
+              },
+              {
+                title: "SaaSKit",
+                role: "Built backend services for user management, analytics tracking, and subscription state handling",
+                problem:
+                  "Created a SaaS foundation with user lifecycle management and real-time analytics pipeline",
+                description:
+                  "Demo SaaS platform with analytics, user management, and subscription tracking backend",
                 image: "/saas.png",
-                tags: ["Next.js", "JavaScript", "MongoDB", "Tailwind CSS"],
+                backendDetails: [
+                  "Auth: Session-based authentication with secure token handling",
+                  "Data: MongoDB with aggregation pipelines for analytics",
+                  "APIs: Subscription management with state transitions",
+                  "Background jobs: Scheduled tasks for metrics aggregation",
+                ],
+                deployment:
+                  "Full-stack deployment with environment-based configurations",
+                outcome:
+                  "Functional SaaS backend demonstrating subscription management and data analytics capabilities",
+                tags: [
+                  "Next.js",
+                  "Node.js",
+                  "MongoDB",
+                  "Express",
+                  "Tailwind CSS",
+                ],
                 link: "https://saas-topaz-rho.vercel.app",
               },
             ].map((project, i) => (
@@ -233,10 +292,51 @@ export default function Home() {
                     <h3 className="text-lg md:text-xl font-semibold group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
-                    <p className="text-xs md:text-sm text-muted-foreground">
+
+                    <p className="text-xs md:text-sm font-medium text-foreground">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+
+                    <div className="space-y-2 text-xs text-muted-foreground">
+                      <p>
+                        <span className="font-medium text-foreground">
+                          Role:
+                        </span>{" "}
+                        {project.role}
+                      </p>
+                      <p>
+                        <span className="font-medium text-foreground">
+                          Problem:
+                        </span>{" "}
+                        {project.problem}
+                      </p>
+
+                      <div>
+                        <p className="font-medium text-foreground mb-1">
+                          Backend:
+                        </p>
+                        <ul className="list-disc list-inside space-y-0.5 ml-2">
+                          {project.backendDetails.map((detail, j) => (
+                            <li key={j}>{detail}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <p>
+                        <span className="font-medium text-foreground">
+                          Deployment:
+                        </span>{" "}
+                        {project.deployment}
+                      </p>
+                      <p>
+                        <span className="font-medium text-foreground">
+                          Outcome:
+                        </span>{" "}
+                        {project.outcome}
+                      </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-2 pt-2">
                       {project.tags.map((tag, j) => (
                         <span
                           key={j}
@@ -264,10 +364,20 @@ export default function Home() {
           </div>
 
           <div className="text-sm md:text-base text-muted-foreground p-4 md:p-6 rounded-xl border border-border/60 bg-background/40">
+            <h3 className="font-semibold text-foreground mb-2">
+              About My Engineering Work
+            </h3>
+            <p className="mb-3">
+              I design and ship backend systems, APIs, and production-grade
+              services used by real users. My expertise spans data modeling,
+              authentication systems, integration flows, and deployment
+              pipelines.
+            </p>
             <p>
-              Apart from these major projects, I have worked on several other
-              projects and the code can be found on my GitHub profile which is
-              in the contact section.
+              Beyond these major projects, you can find additional work and
+              open-source contributions on my GitHub profile in the contact
+              section below. I focus on building reliable, maintainable systems
+              that solve real business problems.
             </p>
           </div>
         </div>
@@ -294,12 +404,13 @@ export default function Home() {
                     GET IN TOUCH
                   </p>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight mb-3">
-                    Let&apos;s build something amazing together
+                    Let&apos;s talk about building reliable systems
                   </h2>
                   <p className="text-sm md:text-base text-muted-foreground max-w-prose">
-                    Available for freelance projects, full-time opportunities,
-                    and collaborative ventures. Let&apos;s create impactful
-                    digital experiences.
+                    I&apos;m actively interviewing for backend-leaning
+                    full-stack and backend engineering roles. Let&apos;s discuss
+                    building reliable APIs, scalable systems, and robust
+                    engineering workflows.
                   </p>
                 </div>
 
@@ -375,8 +486,10 @@ export default function Home() {
                       className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm hover:bg-accent hover:text-accent-foreground transition-colors col-span-2"
                     >
                       <FileUser className="h-4 w-4" />
-                      <span className="hidden sm:inline">View Resume</span>
-                      <span className="sm:hidden">Resume</span>
+                      <span className="hidden sm:inline">
+                        Download CV
+                      </span>
+                      <span className="sm:hidden">Download CV</span>
                     </a>
                   </div>
                 </div>

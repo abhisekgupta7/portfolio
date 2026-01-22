@@ -30,41 +30,42 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_APP_URL || "https://www.abhisekgupta.me",
   ),
   title: {
-    default: "Abhisek Gupta - Full-Stack Next.js Developer | SaaS Builder",
+    default:
+      "Abhisek Gupta - Backend-Leaning Software Engineer | Full-Stack Developer",
     template: "%s | Abhisek Gupta Portfolio",
   },
   description:
-    "Full-Stack Developer specializing in Next.js, React, and TypeScript. Building modern web applications, SaaS products, and AI-powered solutions.",
+    "Software Engineer with backend focus, building scalable systems with database architecture, authentication, payment integrations, and production-grade infrastructure. Experienced with Node.js, PostgreSQL, Express, and modern full-stack development.",
   keywords: [
     "Abhisek",
     "Abhishek",
     "Abhisek Gupta",
     "Abhishek Gupta",
-    "Next.js",
-    "React",
-    "TypeScript",
+    "Backend Engineer",
+    "Software Engineer",
     "Full-Stack Developer",
-    "SaaS",
-    "Web Development",
-    "Freelance",
+    "Backend Developer",
+    "System Architecture",
+    "Database Design",
     "Node.js",
     "Express.js",
-    "MongoDB",
+    "PostgreSQL",
+    "TypeScript",
+    "Authentication Systems",
     "Prisma",
     "Drizzle ORM",
-    "Web Design",
-    "Performance Optimization",
-    "API Development",
-    "Database Design",
-    "Software Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "JavaScript Developer",
-    "Web Application Development",
-    "Tailwind CSS",
-    "shadcn/ui",
-    "Clerk Authentication",
     "Stripe Integration",
+    "Production Systems",
+    "Web Application Development",
+    "Server-Side Development",
+    "Database Optimization",
+    "CI/CD",
+    "Deployment Pipelines",
+    "Payment Systems",
+    "Next.js",
+    "React",
+    "Backend Development",
+    "Scalable Systems",
   ],
   authors: [{ name: "Abhisek Gupta", url: "https://github.com/abhisekgupta7" }],
   creator: "Abhisek Gupta",
@@ -72,9 +73,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: "https://www.abhisekgupta.me",
-    title: "Abhisek Gupta - Full-Stack Next.js Developer",
+    title: "Abhisek Gupta - Backend-Leaning Software Engineer",
     description:
-      "Full-Stack Developer specializing in modern web applications with Next.js, React, TypeScript.",
+      "Software Engineer building reliable, scalable backend systems with database architecture, authentication, payment integrations, and production deployment expertise.",
     siteName: "Abhisek Gupta Portfolio",
     images: [
       {
@@ -87,9 +88,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhisek Gupta - Full-Stack Developer",
+    title: "Abhisek Gupta - Backend-Leaning Software Engineer",
     description:
-      "Full-Stack Developer specializing in Next.js and modern web technologies.",
+      "Building scalable backend systems and production infrastructure with Node.js, PostgreSQL, authentication, and payment integrations.",
     creator: "@abhisekgupta7",
   },
   robots: {
@@ -118,7 +119,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="description"
-          content="Full-Stack Developer specializing in Next.js, React, and TypeScript."
+          content="Software Engineer with backend focus, building scalable systems with database architecture, authentication, and production-grade infrastructure."
         />
       </head>
       <body
