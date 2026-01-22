@@ -121,6 +121,47 @@ export default function RootLayout({
           name="description"
           content="Software Engineer with backend focus, building scalable systems with database architecture, authentication, and production-grade infrastructure."
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Abhisek Gupta",
+              alternateName: "Abhishek Gupta",
+              url: "https://www.abhisekgupta.me",
+              image: "https://www.abhisekgupta.me/profile.jpg",
+              jobTitle: "Backend-Leaning Software Engineer",
+              description:
+                "Software Engineer specializing in backend systems, database architecture, authentication, and production-grade web development.",
+              knowsAbout: [
+                "Backend Development",
+                "Node.js",
+                "PostgreSQL",
+                "Database Architecture",
+                "API Development",
+                "Authentication Systems",
+                "Payment Integration",
+                "Express.js",
+                "TypeScript",
+                "Next.js",
+                "Full-Stack Development",
+                "System Architecture",
+                "Prisma",
+                "Drizzle ORM",
+                "Stripe Integration",
+              ],
+              sameAs: [
+                "https://github.com/abhisekgupta7",
+                "https://www.linkedin.com/in/abhisek-gupta-205793278",
+              ],
+              worksFor: {
+                "@type": "Organization",
+                name: "Independent Developer",
+              },
+            }),
+          }}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
