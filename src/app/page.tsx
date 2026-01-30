@@ -92,47 +92,47 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Hero */}
-      <section id="about" className="relative py-16 md:py-28 px-4 md:px-6">
+      <section id="about" className="relative pt-6 pb-8 md:pt-8 md:pb-12 px-4 md:px-6">
         <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,_oklch(0.27_0.02_260/_0.5),_transparent_70%)]" />
         <div className="absolute inset-0 bg-grid-small-white/[0.05] pointer-events-none" />
-        <div className="mx-auto max-w-7xl relative">
-          <div className="grid md:grid-cols-2 gap-8 md:gap-10 items-center">
-            <div className="space-y-6 order-2 md:order-1">
-              <div className="flex items-center space-x-4">
+        <div className="mx-auto max-w-6xl relative">
+          <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-6 md:gap-8 items-center">
+            <div className="space-y-4 order-2 md:order-1">
+              <div className="flex items-center space-x-3">
                 <div className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
                 <p className="text-xs md:text-sm font-medium px-3 py-1 rounded-full border border-border bg-background/70 backdrop-blur">
                   Available for Opportunities
                 </p>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-6xl font-semibold tracking-tight leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
                 Hi, I&apos;m{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/70">
                   Abhisek
                 </span>
               </h1>
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-medium tracking-tight text-muted-foreground">
+              <h2 className="text-xl sm:text-2xl md:text-2xl font-medium tracking-tight text-muted-foreground">
                 <span className="text-foreground">
                   Product-Focused Software Engineer
                 </span>
                 <br className="hidden sm:block" />
                 <span className="text-foreground">(Backend Leaning)</span>
               </h2>
-              <p className="text-sm md:text-base lg:text-lg text-muted-foreground max-w-prose leading-relaxed">
+              <p className="text-sm md:text-base text-muted-foreground max-w-prose leading-relaxed">
                 Building reliable, secure backend systems and production-grade
                 web platforms with strong API design, data modeling,
                 authentication, and real-world failure handling.
               </p>
-              <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-2">
+              <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 pt-1">
                 <Link
                   href="#projects"
-                  className="px-6 py-3 rounded-md bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 text-center"
+                  className="px-5 py-2.5 rounded-md bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:shadow-lg hover:shadow-primary/20 transition-all duration-300 text-center text-sm font-medium"
                 >
                   View Projects
                 </Link>
                 <a
                   href="/resume.pdf"
                   download
-                  className="px-6 py-3 rounded-md border border-input hover:bg-accent hover:text-accent-foreground transition group flex items-center justify-center gap-2"
+                  className="px-5 py-2.5 rounded-md border border-input hover:bg-accent hover:text-accent-foreground transition group flex items-center justify-center gap-2 text-sm font-medium"
                 >
                   Download CV
                   <Download className="h-4 w-4 group-hover:translate-y-[-2px] transition-transform" />
@@ -140,18 +140,18 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center md:justify-end order-1 md:order-2">
-              <div className="relative w-full max-w-xs sm:max-w-sm">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-primary/60 rounded-2xl blur opacity-30"></div>
+              <div className="relative w-64 sm:w-72 md:w-80">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary to-primary/60 rounded-xl blur opacity-25"></div>
                 <Image
                   src="/profile.jpg"
                   alt="Profile Picture of Abhisek Gupta"
-                  width={360}
-                  height={360}
-                  className="rounded-2xl ring-1 ring-border object-cover relative z-10 hover:scale-[1.02] transition-all duration-300 w-full"
+                  width={320}
+                  height={320}
+                  className="rounded-xl ring-1 ring-border object-cover relative z-10 hover:scale-[1.02] transition-all duration-300 w-full shadow-xl"
                   priority
                 />
-                <div className="absolute -bottom-4 -right-4 bg-background rounded-full p-3 ring-1 ring-border z-20">
-                  <MountainSnow className="h-6 w-6 text-primary" />
+                <div className="absolute -bottom-3 -right-3 bg-background rounded-full p-2.5 ring-1 ring-border shadow-lg z-20">
+                  <MountainSnow className="h-5 w-5 text-primary" />
                 </div>
               </div>
             </div>
@@ -486,9 +486,7 @@ export default function Home() {
                       className="inline-flex items-center justify-center gap-2 rounded-lg border border-border px-3 md:px-4 py-2 md:py-3 text-xs md:text-sm hover:bg-accent hover:text-accent-foreground transition-colors col-span-2"
                     >
                       <FileUser className="h-4 w-4" />
-                      <span className="hidden sm:inline">
-                        Download CV
-                      </span>
+                      <span className="hidden sm:inline">Download CV</span>
                       <span className="sm:hidden">Download CV</span>
                     </a>
                   </div>
