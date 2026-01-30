@@ -41,14 +41,15 @@ const Footer = () => {
                   Abhisek Gupta
                 </h3>
                 <p className="text-xs text-muted-foreground">
-                  Next.js Developer
+                  Software Developer
                 </p>
               </div>
             </div>
 
             <p className="text-muted-foreground text-xs md:text-sm leading-relaxed">
-              Crafting modern, performance-optimized web applications with
-              Next.js and the latest frontend technologies.
+              Building innovative and scalable web solutions with modern
+              technologies. Passionate about creating exceptional user
+              experiences.
             </p>
 
             <div className="flex items-center gap-3 pt-1">
@@ -117,19 +118,19 @@ const Footer = () => {
 
               {/* Skills */}
               <div className="space-y-4">
-                <h4 className="text-xs md:text-sm font-medium">Skills</h4>
+                <h4 className="text-xs md:text-sm font-medium">Expertise</h4>
                 <div className="grid gap-2">
                   <span className="text-xs md:text-sm text-muted-foreground flex items-center gap-2">
                     <Code className="h-3.5 w-3.5 text-primary flex-shrink-0" />{" "}
-                    Next.js Development
+                    Web Development
                   </span>
                   <span className="text-xs md:text-sm text-muted-foreground flex items-center gap-2">
                     <Terminal className="h-3.5 w-3.5 text-primary flex-shrink-0" />{" "}
-                    Full-Stack Engineering
+                    Full-Stack Solutions
                   </span>
                   <span className="text-xs md:text-sm text-muted-foreground flex items-center gap-2">
                     <Zap className="h-3.5 w-3.5 text-primary flex-shrink-0" />{" "}
-                    Performance Optimization
+                    UI/UX Design
                   </span>
                 </div>
               </div>
