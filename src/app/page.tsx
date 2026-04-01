@@ -9,6 +9,10 @@ export const metadata: Metadata = {
     "Abhishek",
     "Abhisek Gupta",
     "Abhishek Gupta",
+    "Abishek Gupta",
+    "Abhisek Guppta",
+    "Abhisek Gupta Next.js Developer",
+    "Abhisek Gupta Portfolio",
     "Backend Engineer",
     "Software Engineer",
     "API Design",
@@ -22,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourportfolio.com",
+    url: "https://www.abhisekgupta.me",
     title: "Abhisek Gupta - Backend & Systems Engineer",
     description:
       "Building reliable, secure backend systems and production-grade web platforms with strong API design and data modeling.",
@@ -92,7 +96,10 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Hero */}
-      <section id="about" className="relative pt-6 pb-8 md:pt-8 md:pb-12 px-4 md:px-6">
+      <section
+        id="about"
+        className="relative pt-6 pb-8 md:pt-8 md:pb-12 px-4 md:px-6"
+      >
         <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,_oklch(0.27_0.02_260/_0.5),_transparent_70%)]" />
         <div className="absolute inset-0 bg-grid-small-white/[0.05] pointer-events-none" />
         <div className="mx-auto max-w-6xl relative">

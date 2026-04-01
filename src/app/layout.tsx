@@ -41,6 +41,11 @@ export const metadata: Metadata = {
     "Abhishek",
     "Abhisek Gupta",
     "Abhishek Gupta",
+    "Abishek Gupta",
+    "Abhisek Guppta",
+    "Abhisek Gupta Next.js Developer",
+    "Abhisek Gupta Backend Developer",
+    "Abhisek Gupta Portfolio",
     "Backend Engineer",
     "Software Engineer",
     "Full-Stack Developer",
@@ -128,10 +133,17 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Person",
               name: "Abhisek Gupta",
-              alternateName: "Abhishek Gupta",
+              alternateName: [
+                "Abhishek Gupta",
+                "Abishek Gupta",
+                "Abhisek Guppta",
+                "Abhishek Guptha",
+                "Abhisek",
+              ],
               url: "https://www.abhisekgupta.me",
               image: "https://www.abhisekgupta.me/profile.jpg",
-              jobTitle: "Backend-Leaning Software Engineer",
+              jobTitle:
+                "Next.js Developer and Backend-Leaning Software Engineer",
               description:
                 "Software Engineer specializing in backend systems, database architecture, authentication, and production-grade web development.",
               knowsAbout: [
