@@ -96,13 +96,10 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Hero */}
-      <section
-        id="about"
-        className="relative pt-6 pb-8 md:pt-8 md:pb-12 px-4 md:px-6"
-      >
+      <section id="about" className="relative pt-6 pb-8 md:pt-8 md:pb-12">
         <div className="absolute inset-0 bg-[radial-gradient(60%_50%_at_50%_0%,_oklch(0.27_0.02_260/_0.5),_transparent_70%)]" />
         <div className="absolute inset-0 bg-grid-small-white/[0.05] pointer-events-none" />
-        <div className="mx-auto max-w-6xl relative">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 relative">
           <div className="grid md:grid-cols-[1.2fr_0.8fr] gap-6 md:gap-8 items-center">
             <div className="space-y-4 order-2 md:order-1">
               <div className="flex items-center space-x-3">
@@ -170,9 +167,9 @@ export default function Home() {
       <TechStack techStack={techStack} />
 
       {/* Projects */}
-      <section id="projects" className="relative px-4 md:px-6">
+      <section id="projects" className="relative">
         <div className="absolute inset-0 bg-[radial-gradient(60%_80%_at_50%_100%,_oklch(0.27_0.02_260/_0.3),_transparent_70%)]" />
-        <div className="mx-auto max-w-7xl py-16 md:py-28 relative">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 py-16 md:py-28 relative">
           <div className="mb-6 md:mb-10">
             <p className="text-xs md:text-sm text-primary font-medium mb-2">
               🚀 SELECTED WORK

@@ -1,26 +1,12 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useTheme } from "next-themes";
-import { Moon, Sun, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  // Only run after hydration to avoid mismatch
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const toggleTheme = () => {
-    const next =
-      resolvedTheme === "dark" || theme === "dark" ? "light" : "dark";
-    setTheme(next);
-  };
 
   const navLinks = [
     { href: "#about", label: "About" },
@@ -30,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 w-full backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border">
-      <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 py-3 flex items-center justify-between">
         <div className="flex items-center gap-2 md:gap-3">
           <Link
             href="/"
@@ -65,27 +51,8 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Theme toggle and Mobile menu */}
+        {/* Mobile menu */}
         <div className="flex items-center gap-2">
-          <button
-            aria-label={`Switch to ${
-              resolvedTheme === "dark" ? "light" : "dark"
-            } theme`}
-            onClick={toggleTheme}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-border bg-background hover:bg-accent hover:text-accent-foreground transition-colors"
-          >
-            {mounted ? (
-              resolvedTheme === "dark" ? (
-                <Sun className="size-4" />
-              ) : (
-                <Moon className="size-4" />
-              )
-            ) : (
-              <div className="size-4"></div>
-            )}
-          </button>
-
-          {/* Mobile Menu Button */}
           <button
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -103,7 +70,7 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="md:hidden border-t border-border bg-background/80 backdrop-blur">
-          <div className="mx-auto max-w-7xl px-4 py-3 flex flex-col gap-3 text-sm">
+          <div className="mx-auto max-w-7xl px-4 md:px-6 py-3 flex flex-col gap-3 text-sm">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

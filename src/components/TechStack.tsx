@@ -75,7 +75,7 @@ export default function TechStack({ techStack }: TechStackProps) {
 
   return (
     <section className="border-y border-border/60 bg-secondary/30 backdrop-blur-sm overflow-hidden">
-      <div className="py-2">
+      <div className="mx-auto max-w-7xl px-4 md:px-6 py-2">
         <div className="flex justify-center mb-3">
           <div
             className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border/60 bg-background/40 backdrop-blur text-xs font-medium cursor-pointer hover:bg-background/60 transition-colors"
@@ -92,7 +92,7 @@ export default function TechStack({ techStack }: TechStackProps) {
         >
           <div
             ref={scrollRef}
-            className={`flex w-max min-w-full items-center gap-4 md:gap-6 py-6 px-4 md:py-6 md:px-4 ${
+            className={`flex w-max min-w-full items-center gap-4 md:gap-6 py-6 px-2 md:py-6 md:px-2 ${
               isAnimating ? "animate-[marquee_15s_linear_infinite]" : ""
             }`}
             style={{

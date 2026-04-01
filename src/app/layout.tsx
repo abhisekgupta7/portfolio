@@ -120,12 +120,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="description"
-          content="Software Engineer with backend focus, building scalable systems with database architecture, authentication, and production-grade infrastructure."
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -180,12 +174,13 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="dark"
+          forcedTheme="dark"
+          enableSystem={false}
           disableTransitionOnChange
         >
           <Navbar />
-          <main>{children}</main>
+          {children}
           <Footer />
         </ThemeProvider>
       </body>
