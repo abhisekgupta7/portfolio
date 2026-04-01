@@ -74,7 +74,7 @@ export default function TechStack({ techStack }: TechStackProps) {
   }, [isDragging]);
 
   return (
-    <section className="border-y border-border/60 bg-secondary/30 backdrop-blur-sm">
+    <section className="border-y border-border/60 bg-secondary/30 backdrop-blur-sm overflow-hidden">
       <div className="py-2">
         <div className="flex justify-center mb-3">
           <div
@@ -85,14 +85,14 @@ export default function TechStack({ techStack }: TechStackProps) {
           </div>
         </div>
         <div
-          className={`overflow-x-auto md:overflow-hidden cursor-${isDragging ? "grabbing" : "grab"} group`}
+          className={`relative w-full overflow-hidden cursor-${isDragging ? "grabbing" : "grab"} group`}
           ref={containerRef}
           role="region"
           aria-label="Tech stack carousel"
         >
           <div
             ref={scrollRef}
-            className={`flex items-center gap-4 md:gap-6 py-6 px-4 md:py-6 md:px-4 ${
+            className={`flex w-max min-w-full items-center gap-4 md:gap-6 py-6 px-4 md:py-6 md:px-4 ${
               isAnimating ? "animate-[marquee_15s_linear_infinite]" : ""
             }`}
             style={{
