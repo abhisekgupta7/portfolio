@@ -159,6 +159,7 @@ export default function Home() {
                   width={320}
                   height={320}
                   className="rounded-xl ring-1 ring-border object-cover relative z-10 hover:scale-[1.02] transition-all duration-300 w-full shadow-xl"
+                  sizes="(min-width: 1024px) 320px, (min-width: 768px) 288px, 256px"
                   priority
                 />
                 <div className="absolute -bottom-3 -right-3 bg-background rounded-full p-2.5 ring-1 ring-border shadow-lg z-20">
@@ -296,6 +297,7 @@ export default function Home() {
                       alt={`${project.title} project screenshot`}
                       fill
                       className="object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                      sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
                       loading="lazy"
                     />
                   </div>

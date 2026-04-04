@@ -25,7 +25,6 @@ const nextConfig: NextConfig = {
     ],
     contentDispositionType: "attachment",
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    unoptimized: true,
   },
   poweredByHeader: false,
   compress: true,

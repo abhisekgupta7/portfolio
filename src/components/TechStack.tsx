@@ -100,7 +100,7 @@ export default function TechStack({ techStack }: TechStackProps) {
               scrollBehavior: "smooth",
             }}
           >
-            {[...techStack, ...techStack, ...techStack].map((t, i) => (
+            {[...techStack, ...techStack].map((t, i) => (
               <div
                 key={i}
                 className="inline-flex flex-shrink-0 flex-col items-center justify-center gap-2 md:gap-3 px-3 md:px-4 py-2 md:py-3 rounded-lg md:rounded-xl bg-background/40 border border-border/40 hover:border-border/80 hover:bg-background/60 transition-all duration-300 group select-none"
@@ -111,6 +111,8 @@ export default function TechStack({ techStack }: TechStackProps) {
                     alt={t.name}
                     fill
                     className="object-contain group-hover:scale-110 transition-transform duration-300"
+                    sizes="(min-width: 768px) 32px, 24px"
+                    unoptimized
                     loading="lazy"
                     draggable="false"
                   />
