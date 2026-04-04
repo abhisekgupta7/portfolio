@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /api/
-Disallow: /.next/
+Disallow: /_next/
+Disallow: /admin/
+Host: https://www.abhisekgupta7.com.np
 
-Sitemap: https://www.abhisekgupta.me/sitemap.xml
+Sitemap: https://www.abhisekgupta7.com.np/sitemap.xml

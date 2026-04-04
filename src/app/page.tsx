@@ -1,4 +1,8 @@
 import { Metadata } from "next";
+import { getSiteUrl } from "@/lib/seo";
+
+const SITE_URL = getSiteUrl();
+
 export const metadata: Metadata = {
   title:
     "Abhisek Gupta - Product-Focused Software Engineer | Backend & API Design",
@@ -26,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.abhisekgupta.me",
+    url: SITE_URL,
     title: "Abhisek Gupta - Backend & Systems Engineer",
     description:
       "Building reliable, secure backend systems and production-grade web platforms with strong API design and data modeling.",
@@ -37,6 +41,9 @@ export const metadata: Metadata = {
     title: "Abhisek Gupta - Backend & Systems Engineer",
     description:
       "Building reliable backend systems with API design, database architecture, and production deployment expertise.",
+  },
+  alternates: {
+    canonical: SITE_URL,
   },
 };
 

@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar/page";
 import Footer from "@/components/Footer/page";
 import { ThemeProvider } from "@/components/theme-provider";
+import { getSiteUrl } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +27,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_APP_URL || "https://www.abhisekgupta.me",
-  ),
+  metadataBase: new URL(getSiteUrl()),
   title: {
     default:
       "Abhisek Gupta - Backend-Leaning Software Engineer | Full-Stack Developer",
@@ -74,10 +73,11 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Abhisek Gupta", url: "https://github.com/abhisekgupta7" }],
   creator: "Abhisek Gupta",
+  applicationName: "Abhisek Gupta Portfolio",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.abhisekgupta.me",
+    url: getSiteUrl(),
     title: "Abhisek Gupta - Backend-Leaning Software Engineer",
     description:
       "Software Engineer building reliable, scalable backend systems with database architecture, authentication, payment integrations, and production deployment expertise.",
@@ -102,9 +102,16 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
     nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
   },
   alternates: {
-    canonical: "https://www.abhisekgupta.me",
+    canonical: getSiteUrl(),
   },
   icons: {
     icon: "/favicon.ico",
@@ -117,6 +124,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const siteUrl = getSiteUrl();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -134,8 +143,8 @@ export default function RootLayout({
                 "Abhishek Guptha",
                 "Abhisek",
               ],
-              url: "https://www.abhisekgupta.me",
-              image: "https://www.abhisekgupta.me/profile.jpg",
+              url: siteUrl,
+              image: `${siteUrl}/profile.jpg`,
               jobTitle:
                 "Next.js Developer and Backend-Leaning Software Engineer",
               description:

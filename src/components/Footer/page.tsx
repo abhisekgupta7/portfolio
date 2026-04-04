@@ -33,7 +33,7 @@ const Footer = () => {
                   alt="AG Logo"
                   width={40}
                   height={40}
-                  className="relative rounded-md object-cover ring-1 ring-border z-10"
+                  className="relative h-10 w-10 rounded-md object-cover ring-1 ring-border z-10"
                 />
               </div>
               <div>

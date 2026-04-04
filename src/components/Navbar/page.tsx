@@ -28,7 +28,7 @@ const Navbar = () => {
               alt="Abhisek Gupta Logo"
               width={36}
               height={36}
-              className="rounded-md object-cover ring-1 ring-border"
+              className="h-9 w-9 rounded-md object-cover ring-1 ring-border"
               priority
             />
             <span className="text-sm md:text-base font-semibold tracking-tight">
