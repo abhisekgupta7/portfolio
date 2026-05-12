@@ -199,33 +199,47 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
             {[
               {
-                title: "Everything",
-                role: "Led backend architecture for authentication, payments, and transactional workflows",
+                title: "Opscale",
+                role: "Architected and developed a full-stack SaaS platform focused on inventory management and payment automation",
+
                 problem:
-                  "Designed a system to support secure payments, multi-role access, and data integrity under concurrent use",
+                  "Designed a scalable backend system to handle user authentication, subscription management, operational analytics, and secure API services for a SaaS product",
                 description:
-                  "Enterprise-grade full-stack system with production-ready backend infrastructure",
-                image: "/everything.png",
+                  "Opscale is a SaaS operations platform built with a modern full-stack architecture featuring authentication, analytics dashboards, subscription workflows, inventory mamagement and paymnet automation",
+
+                image: "/opscale.png",
+
                 backendDetails: [
-                  "Auth: JWT + role-based access control (RBAC)",
-                  "Data: PostgreSQL schema with indexes for performance",
-                  "Integrations: Stripe with idempotent webhook handling",
-                  "APIs: REST endpoints with structured error responses",
+                  "Authentication: Secure jwt-based auth with protected routes and middleware handling",
+                  "Database: Neon schema design with aggregation pipelines for operational analytics and dashboard metrics",
+                  "APIs: RESTful backend and server actions services for user management, subscriptions, analytics, and workflow operations",
+                  "Analytics: Real-time operational metrics tracking with aggregated reporting pipelines",
+                  "Architecture: Modular backend structure with scalable service separation and reusable API patterns",
+                  "Background Processing: Scheduled metric aggregation and automated operational state updates",
+                  "Security: Environment-based secret management and protected API access patterns",
                 ],
+
                 deployment:
-                  "Production CI/CD with environment config and secure secrets management",
+                  "Production deployment using Vercel with environment-based configuration management and optimized frontend/backend integration",
+
                 outcome:
-                  "Production-ready backend supporting secure user flows and trackable analytics",
+                  "Built a scalable SaaS foundation demonstrating real-world full-stack engineering concepts including analytics processing, subscription lifecycle management, operational dashboards, and modern API architecture",
+
                 tags: [
                   "Next.js",
-                  "Stripe",
+                  "TypeScript",
+                  "Node.js",
                   "Neon DB",
                   "Drizzle ORM",
-                  "Clerk Auth",
-                  "PostgreSQL",
+                  "Tailwind CSS",
+                  "REST API",
+                  "Analytics",
+                  "SaaS",
                 ],
-                link: "https://everything-eight-bice.vercel.app/",
+
+                link: "https://opscale-roan.vercel.app/",
               },
+              
               {
                 title: "Ecom",
                 role: "Designed backend API and database architecture for product catalog and user transactions",
@@ -255,31 +269,32 @@ export default function Home() {
                 link: "https://ecommerce-eta-one-33.vercel.app/",
               },
               {
-                title: "SaaSKit",
-                role: "Built backend services for user management, analytics tracking, and subscription state handling",
+                title: "Ai summary app",
+                role: "Led backend architecture for authentication, payments, and transactional workflows",
                 problem:
-                  "Created a SaaS foundation with user lifecycle management and real-time analytics pipeline",
+                  "Designed a system to support secure payments, multi-role access, and data integrity under concurrent use",
                 description:
-                  "Demo SaaS platform with analytics, user management, and subscription tracking backend",
-                image: "/saas.png",
+                  "Enterprise-grade full-stack system with production-ready backend infrastructure",
+                image: "/everything.png",
                 backendDetails: [
-                  "Auth: Session-based authentication with secure token handling",
-                  "Data: MongoDB with aggregation pipelines for analytics",
-                  "APIs: Subscription management with state transitions",
-                  "Background jobs: Scheduled tasks for metrics aggregation",
+                  "Auth: JWT + role-based access control (RBAC)",
+                  "Data: PostgreSQL schema with indexes for performance",
+                  "Integrations: Stripe with idempotent webhook handling",
+                  "APIs: REST endpoints with structured error responses",
                 ],
                 deployment:
-                  "Full-stack deployment with environment-based configurations",
+                  "Production CI/CD with environment config and secure secrets management",
                 outcome:
-                  "Functional SaaS backend demonstrating subscription management and data analytics capabilities",
+                  "Production-ready backend supporting secure user flows and trackable analytics",
                 tags: [
                   "Next.js",
-                  "Node.js",
-                  "MongoDB",
-                  "Express",
-                  "Tailwind CSS",
+                  "Stripe",
+                  "Neon DB",
+                  "Drizzle ORM",
+                  "Clerk Auth",
+                  "PostgreSQL",
                 ],
-                link: "https://saas-topaz-rho.vercel.app",
+                link: "https://everything-eight-bice.vercel.app/",
               },
             ].map((project, i) => (
               <article
