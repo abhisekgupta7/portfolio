@@ -122,16 +122,17 @@ export default function Home() {
                 </span>
               </h1>
               <h2 className="text-xl sm:text-2xl md:text-2xl font-medium tracking-tight text-muted-foreground">
-                <span className="text-foreground">
-                  Product-Focused Software Engineer
-                </span>
+                <span className="text-foreground">Full-Stack Developer</span>
                 <br className="hidden sm:block" />
-                <span className="text-foreground">(Backend Leaning)</span>
+                <span className="text-foreground">
+                  Specializing in AI-Powered SaaS
+                </span>
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-prose leading-relaxed">
-                Building reliable, secure backend systems and production-grade
-                web platforms with strong API design, data modeling,
-                authentication, and real-world failure handling.
+                Building production-grade SaaS products with Next.js,
+                TypeScript, and PostgreSQL — from auth and payments to AI agents
+                that query live business data in natural language using
+                LangGraph and FastAPI.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 pt-1">
                 <Link
@@ -210,13 +211,10 @@ export default function Home() {
                 image: "/opscale.png",
 
                 backendDetails: [
-                  "Authentication: Secure jwt-based auth with protected routes and middleware handling",
-                  "Database: Neon schema design with aggregation pipelines for operational analytics and dashboard metrics",
-                  "APIs: RESTful backend and server actions services for user management, subscriptions, analytics, and workflow operations",
-                  "Analytics: Real-time operational metrics tracking with aggregated reporting pipelines",
-                  "Architecture: Modular backend structure with scalable service separation and reusable API patterns",
-                  "Background Processing: Scheduled metric aggregation and automated operational state updates",
-                  "Security: Environment-based secret management and protected API access patterns",
+                  "Auth: JWT-based authentication with protected routes and middleware",
+                  "Database: Neon with aggregation pipelines for analytics dashboards",
+                  "APIs: RESTful services for subscriptions, analytics, and workflows",
+                  "Processing: Real-time metrics and scheduled state updates",
                 ],
 
                 deployment:
@@ -239,7 +237,7 @@ export default function Home() {
 
                 link: "https://opscale-roan.vercel.app/",
               },
-              
+
               {
                 title: "Ecom",
                 role: "Designed backend API and database architecture for product catalog and user transactions",
