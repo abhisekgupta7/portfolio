@@ -23,7 +23,7 @@ export default function TechStack({ categories }: TechStackProps) {
           TECHNOLOGIES I WORK WITH
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-5">
           {categories.map((category) => (
             <div
               key={category.label}
@@ -38,7 +38,7 @@ export default function TechStack({ categories }: TechStackProps) {
                     key={tech.name}
                     className="inline-flex items-center gap-2 px-2.5 md:px-3 py-1.5 md:py-2 rounded-lg bg-background/60 border border-border/40 hover:border-border/80 hover:bg-background/90 transition-all duration-200 group"
                   >
-                    <div className="relative h-4 w-4 md:h-5 md:w-5 flex-shrink-0">
+                    <div className="relative h-6 w-6 md:h-5 md:w-5 flex-shrink-0">
                       <Image
                         src={tech.icon}
                         alt={tech.name}
