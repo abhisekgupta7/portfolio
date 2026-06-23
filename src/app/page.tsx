@@ -5,9 +5,9 @@ const SITE_URL = getSiteUrl();
 
 export const metadata: Metadata = {
   title:
-    "Abhisek Gupta - Product-Focused Software Engineer | Backend & API Design",
+    "Abhisek Gupta — Full-Stack Developer | AI-Native Systems & Backend Engineering",
   description:
-    "Software Engineer specializing in backend systems, API design, database architecture, authentication, and production-grade web platforms. Building reliable, secure systems with Node.js, PostgreSQL, and modern deployment pipelines.",
+    "Full-stack developer building AI-native production systems — multilingual AI tutoring, LangGraph agents, and open-source SDKs. Next.js, FastAPI, AWS, Docker, and modern AI infrastructure.",
   keywords: [
     "Abhisek",
     "Abhishek",
@@ -17,30 +17,32 @@ export const metadata: Metadata = {
     "Abhisek Guppta",
     "Abhisek Gupta Next.js Developer",
     "Abhisek Gupta Portfolio",
+    "AI Engineer",
+    "Full-Stack Developer",
+    "LangGraph",
+    "LangChain",
+    "FastAPI",
+    "Next.js",
+    "AWS",
     "Backend Engineer",
-    "Software Engineer",
-    "API Design",
-    "Node.js",
-    "PostgreSQL",
     "System Architecture",
-    "Full-stack developer",
-    "Database Design",
+    "Open Source SDK",
   ],
   authors: [{ name: "Abhisek Gupta" }],
   openGraph: {
     type: "website",
     locale: "en_US",
     url: SITE_URL,
-    title: "Abhisek Gupta - Backend & Systems Engineer",
+    title: "Abhisek Gupta — Full-Stack Developer | AI-Native Systems",
     description:
-      "Building reliable, secure backend systems and production-grade web platforms with strong API design and data modeling.",
+      "Building AI-native production systems — multilingual AI tutoring, LangGraph agents, and open-source SDKs.",
     siteName: "Abhisek Gupta Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abhisek Gupta - Backend & Systems Engineer",
+    title: "Abhisek Gupta — Full-Stack Developer | AI-Native Systems",
     description:
-      "Building reliable backend systems with API design, database architecture, and production deployment expertise.",
+      "Building AI-native production systems with Next.js, FastAPI, LangGraph, and AWS.",
   },
   alternates: {
     canonical: SITE_URL,
@@ -61,42 +63,148 @@ import Image from "next/image";
 import Link from "next/link";
 import TechStack from "@/components/TechStack";
 
-const techStack = [
-  // Backend Engineering (Primary)
-  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/6cc24a" },
-  { name: "Express", icon: "https://cdn.simpleicons.org/express/ffffff" },
-  { name: "PostgreSQL", icon: "https://cdn.simpleicons.org/postgresql/31648c" },
-  { name: "Prisma", icon: "https://cdn.simpleicons.org/prisma/2d3748" },
+const techCategories = [
   {
-    name: "Drizzle ORM",
-    icon: "https://cdn.simpleicons.org/drizzle/C5F74F",
+    label: "AI & Agents",
+    items: [
+      {
+        name: "LangChain",
+        icon: "https://cdn.simpleicons.org/langchain/1C3C3C",
+      },
+      { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/ffffff" },
+      { name: "Gemini", icon: "https://cdn.simpleicons.org/googlegemini/8E75B2" },
+      { name: "FastAPI", icon: "https://cdn.simpleicons.org/fastapi/009688" },
+      { name: "Python", icon: "https://cdn.simpleicons.org/python/3776ab" },
+    ],
   },
-  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/3178c6" },
+  {
+    label: "Infrastructure",
+    items: [
+      { name: "AWS", icon: "https://cdn.simpleicons.org/amazonaws/ffffff" },
+      { name: "Docker", icon: "https://cdn.simpleicons.org/docker/2496ed" },
+      { name: "Redis", icon: "https://cdn.simpleicons.org/redis/dc382d" },
+      { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/ffffff" },
+      { name: "GitHub", icon: "https://cdn.simpleicons.org/github/ffffff" },
+    ],
+  },
+  {
+    label: "Backend",
+    items: [
+      { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/6cc24a" },
+      {
+        name: "PostgreSQL",
+        icon: "https://cdn.simpleicons.org/postgresql/31648c",
+      },
+      {
+        name: "Drizzle ORM",
+        icon: "https://cdn.simpleicons.org/drizzle/C5F74F",
+      },
+      { name: "Stripe", icon: "https://cdn.simpleicons.org/stripe/008CDD" },
+      { name: "Clerk", icon: "https://cdn.simpleicons.org/clerk/6C47FF" },
+    ],
+  },
+  {
+    label: "Frontend",
+    items: [
+      { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
+      { name: "React", icon: "https://cdn.simpleicons.org/react/61dafb" },
+      {
+        name: "TypeScript",
+        icon: "https://cdn.simpleicons.org/typescript/3178c6",
+      },
+      {
+        name: "Tailwind CSS",
+        icon: "https://cdn.simpleicons.org/tailwindcss/38bdf8",
+      },
+    ],
+  },
+];
 
-  // Systems & Integrations
-  { name: "Stripe", icon: "https://cdn.simpleicons.org/stripe/008CDD" },
-  { name: "Clerk", icon: "https://cdn.simpleicons.org/clerk/6C47FF" },
+const projects = [
   {
-    name: "Neon DB",
-    icon: "https://avatars.githubusercontent.com/u/77690634",
+    title: "Cognora",
+    eyebrow: "Flagship — AI-Native System",
+    role: "Owned the full stack end to end — product, AI pipeline, backend, frontend, infrastructure, and deployment",
+    problem:
+      "LMS platforms needed more than a chatbot — students needed tutoring, assessment, and reporting in their own language, without blocking the app while AI processes long-running tasks",
+    description:
+      "A multilingual AI tutor for LMS platforms — supporting English, Hindi, and Nepali — that teaches, quizzes, and evaluates students automatically",
+    image: "/cognora.png",
+    detailsLabel: "Architecture:",
+    details: [
+      "4-service system: Next.js frontend, FastAPI backend, dedicated worker, and Redis as the job queue",
+      "Async pipeline: long-running AI tasks (transcript processing, quiz generation) run on the worker so the API never blocks",
+      "Multilingual tutoring with streaming responses across English, Hindi, and Nepali",
+      "Automated evaluation and personalized performance reports delivered by email",
+    ],
+    deployment:
+      "Containerized with Docker, deployed on AWS EC2 with a CI/CD pipeline for automated releases",
+    outcome:
+      "An AI-native product designed around the AI workflow from day one — not a feature bolted onto an existing app",
+    tags: [
+      "Next.js",
+      "FastAPI",
+      "Docker",
+      "Redis",
+      "AWS EC2",
+      "CI/CD",
+      "LangChain",
+    ],
+    link: "https://cognora-frontend.abhisekgupta7.com.np/",
   },
-  { name: "MongoDB", icon: "https://cdn.simpleicons.org/mongodb/10aa50" },
-
-  // Supporting Frontend
-  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
-  { name: "React", icon: "https://cdn.simpleicons.org/react/61dafb" },
   {
-    name: "Tailwind CSS",
-    icon: "https://cdn.simpleicons.org/tailwindcss/38bdf8",
+    title: "OpScale",
+    eyebrow: "AI Agent Integration",
+    role: "Designed the data model and integrated a LangGraph AI agent into an existing operations platform",
+    problem:
+      "Wholesale dealers track payments manually across notebooks and spreadsheets — they needed a way to ask questions about their own business and get real answers",
+    description:
+      "An AI-powered wholesale operations platform — dealers query overdue payments, revenue, and sales trends in plain English",
+    image: "/opscale.png",
+    detailsLabel: "AI Agent:",
+    details: [
+      "LangGraph agent with 5 business intelligence tools, scoped per organization (org_id isolation)",
+      "FastAPI backend on Railway streams agent responses to the Next.js dashboard via SSE",
+      "Credit ledger (khata) system tracking deferred and partial payments per buyer",
+      "Write operations stay in the validated Next.js layer — the agent reads and drafts, humans confirm",
+    ],
+    deployment:
+      "FastAPI deployed on Railway, Next.js on Vercel, PostgreSQL on Neon",
+    outcome:
+      "A working example of adding an AI layer to existing business logic without compromising data integrity",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "PostgreSQL",
+      "LangGraph",
+      "FastAPI",
+      "Railway",
+    ],
+    link: "https://opscale-roan.vercel.app/",
   },
   {
-    name: "shadcn/ui",
-    icon: "https://api.iconify.design/simple-icons:shadcnui.svg?color=white",
+    title: "PayBridge",
+    eyebrow: "Open Source · Published on npm",
+    role: "Designed and published a TypeScript SDK from scratch — API design, documentation, and developer experience",
+    problem:
+      "Every developer integrating Nepali payment gateways hits the same wall — no npm package, contradictory docs, inconsistent parameter names across providers",
+    description:
+      "A production-ready, framework-agnostic TypeScript SDK unifying Nepali payment gateway integration",
+    image: "/paybridge.png",
+    detailsLabel: "SDK Design:",
+    details: [
+      "Published @paybridgejs/khalti on npm — a 2-function API (initiate / verify) with full type safety",
+      "Framework-agnostic: works identically in Next.js, Express, and vanilla Node.js",
+      "Turborepo + pnpm monorepo with working examples for every supported framework",
+      "eSewa SDK in active development, following the same unified interface",
+    ],
+    deployment:
+      "Documentation site built with Next.js, deployed on Vercel; package published and versioned on npm",
+    outcome:
+      "A real install-and-ship developer tool — the Stripe-style developer experience Nepal's payment ecosystem was missing",
+    tags: ["TypeScript", "npm", "Turborepo", "Next.js", "Open Source"],
+    link: "https://paybridge-docs.vercel.app/",
   },
-
-  // DevOps & Deployment
-  { name: "Vercel", icon: "https://cdn.simpleicons.org/vercel/ffffff" },
-  { name: "GitHub", icon: "https://cdn.simpleicons.org/github/ffffff" },
 ];
 
 export default function Home() {
@@ -125,14 +233,14 @@ export default function Home() {
                 <span className="text-foreground">Full-Stack Developer</span>
                 <br className="hidden sm:block" />
                 <span className="text-foreground">
-                  Specializing in AI-Powered SaaS
+                  Building AI-Native Systems
                 </span>
               </h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-prose leading-relaxed">
-                Building production-grade SaaS products with Next.js,
-                TypeScript, and PostgreSQL — from auth and payments to AI agents
-                that query live business data in natural language using
-                LangGraph and FastAPI.
+                I build production systems where AI is the foundation, not a
+                feature bolted on at the end — from a multilingual AI tutor with
+                async worker pipelines to LangGraph agents that query live
+                business data, deployed on AWS, Docker, and modern CI/CD.
               </p>
               <div className="flex flex-col sm:flex-row flex-wrap gap-2.5 pt-1">
                 <Link
@@ -173,7 +281,7 @@ export default function Home() {
       </section>
 
       {/* Tech Stack Marquee */}
-      <TechStack techStack={techStack} />
+      <TechStack categories={techCategories} />
 
       {/* Projects */}
       <section id="projects" className="relative">
@@ -198,103 +306,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-8">
-            {[
-              {
-                title: "Opscale",
-                role: "Architected and developed a full-stack SaaS platform focused on inventory management and payment automation",
-
-                problem:
-                  "Designed a scalable backend system to handle user authentication, subscription management, operational analytics, and secure API services for a SaaS product",
-                description:
-                  "Opscale is a SaaS operations platform built with a modern full-stack architecture featuring authentication, analytics dashboards, subscription workflows, inventory mamagement and paymnet automation",
-
-                image: "/opscale.png",
-
-                backendDetails: [
-                  "Auth: JWT-based authentication with protected routes and middleware",
-                  "Database: Neon with aggregation pipelines for analytics dashboards",
-                  "APIs: RESTful services for subscriptions, analytics, and workflows",
-                  "Processing: Real-time metrics and scheduled state updates",
-                ],
-
-                deployment:
-                  "Production deployment using Vercel with environment-based configuration management and optimized frontend/backend integration",
-
-                outcome:
-                  "Built a scalable SaaS foundation demonstrating real-world full-stack engineering concepts including analytics processing, subscription lifecycle management, operational dashboards, and modern API architecture",
-
-                tags: [
-                  "Next.js",
-                  "TypeScript",
-                  "Node.js",
-                  "Neon DB",
-                  "Drizzle ORM",
-                  "Tailwind CSS",
-                  "REST API",
-                  "Analytics",
-                  "SaaS",
-                ],
-
-                link: "https://opscale-roan.vercel.app/",
-              },
-
-              {
-                title: "Ecom",
-                role: "Designed backend API and database architecture for product catalog and user transactions",
-                problem:
-                  "Built scalable e-commerce infrastructure handling product listings, inventory, and secure checkout flows",
-                description:
-                  "E-commerce platform with robust backend for merchants and seamless customer experience",
-                image: "/ecom.png",
-                backendDetails: [
-                  "Data: Normalized PostgreSQL schema with relational integrity",
-                  "APIs: RESTful endpoints for product CRUD and order management",
-                  "Storage: ImageKit integration for optimized media delivery",
-                  "Query optimization: Drizzle ORM with indexed lookups",
-                ],
-                deployment:
-                  "Serverless deployment with edge caching and CDN integration",
-                outcome:
-                  "Scalable platform supporting merchant operations and high-traffic customer browsing",
-                tags: [
-                  "Next.js",
-                  "Neon DB",
-                  "Drizzle ORM",
-                  "PostgreSQL",
-                  "ImageKit",
-                  "shadcn/ui",
-                ],
-                link: "https://ecommerce-eta-one-33.vercel.app/",
-              },
-              {
-                title: "Ai summary app",
-                role: "Led backend architecture for authentication, payments, and transactional workflows",
-                problem:
-                  "Designed a system to support secure payments, multi-role access, and data integrity under concurrent use",
-                description:
-                  "Enterprise-grade full-stack system with production-ready backend infrastructure",
-                image: "/everything.png",
-                backendDetails: [
-                  "Auth: JWT + role-based access control (RBAC)",
-                  "Data: PostgreSQL schema with indexes for performance",
-                  "Integrations: Stripe with idempotent webhook handling",
-                  "APIs: REST endpoints with structured error responses",
-                ],
-                deployment:
-                  "Production CI/CD with environment config and secure secrets management",
-                outcome:
-                  "Production-ready backend supporting secure user flows and trackable analytics",
-                tags: [
-                  "Next.js",
-                  "Stripe",
-                  "Neon DB",
-                  "Drizzle ORM",
-                  "Clerk Auth",
-                  "PostgreSQL",
-                ],
-                link: "https://everything-eight-bice.vercel.app/",
-              },
-            ].map((project, i) => (
+            {projects.map((project, i) => (
               <article
                 key={i}
                 className="group relative rounded-2xl overflow-hidden"
@@ -315,6 +327,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-4 md:p-6 space-y-3 relative">
+                    <p className="text-[11px] md:text-xs font-medium uppercase tracking-wide text-primary">
+                      {project.eyebrow}
+                    </p>
                     <h3 className="text-lg md:text-xl font-semibold group-hover:text-primary transition-colors">
                       {project.title}
                     </h3>
@@ -339,10 +354,10 @@ export default function Home() {
 
                       <div>
                         <p className="font-medium text-foreground mb-1">
-                          Backend:
+                          {project.detailsLabel}
                         </p>
                         <ul className="list-disc list-inside space-y-0.5 ml-2">
-                          {project.backendDetails.map((detail, j) => (
+                          {project.details.map((detail, j) => (
                             <li key={j}>{detail}</li>
                           ))}
                         </ul>
@@ -394,16 +409,17 @@ export default function Home() {
               About My Engineering Work
             </h3>
             <p className="mb-3">
-              I design and ship backend systems, APIs, and production-grade
-              services used by real users. My expertise spans data modeling,
-              authentication systems, integration flows, and deployment
-              pipelines.
+              I design AI-native systems end to end — architecture, backend,
+              frontend, infrastructure, and deployment. That means treating AI
+              as the foundation of the system from day one: async job pipelines,
+              agent tool design, and the infrastructure that keeps them reliable
+              in production, not just in a demo.
             </p>
             <p>
-              Beyond these major projects, you can find additional work and
-              open-source contributions on my GitHub profile in the contact
-              section below. I focus on building reliable, maintainable systems
-              that solve real business problems.
+              Beyond these three, you can find additional work and open-source
+              contributions on my GitHub profile in the contact section below. I
+              focus on building reliable systems that solve real problems — for
+              real users, not just for a portfolio.
             </p>
           </div>
         </div>
@@ -430,13 +446,13 @@ export default function Home() {
                     GET IN TOUCH
                   </p>
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight mb-3">
-                    Let&apos;s talk about building reliable systems
+                    Let&apos;s talk about building AI-native systems
                   </h2>
                   <p className="text-sm md:text-base text-muted-foreground max-w-prose">
-                    I&apos;m actively interviewing for backend-leaning
-                    full-stack and backend engineering roles. Let&apos;s discuss
-                    building reliable APIs, scalable systems, and robust
-                    engineering workflows.
+                    I&apos;m actively interviewing for full-stack and AI
+                    engineering roles. Let&apos;s discuss building reliable AI
+                    pipelines, scalable APIs, and production-grade
+                    infrastructure.
                   </p>
                 </div>
 
