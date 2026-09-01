@@ -72,7 +72,10 @@ const techCategories = [
         icon: "https://cdn.simpleicons.org/langchain/1C3C3C",
       },
       { name: "OpenAI", icon: "https://cdn.simpleicons.org/openai/ffffff" },
-      { name: "Gemini", icon: "https://cdn.simpleicons.org/googlegemini/8E75B2" },
+      {
+        name: "Gemini",
+        icon: "https://cdn.simpleicons.org/googlegemini/8E75B2",
+      },
       { name: "FastAPI", icon: "https://cdn.simpleicons.org/fastapi/009688" },
       { name: "Python", icon: "https://cdn.simpleicons.org/python/3776ab" },
     ],
@@ -129,7 +132,7 @@ const projects = [
       "LMS platforms needed more than a chatbot — students needed tutoring, assessment, and reporting in their own language, without blocking the app while AI processes long-running tasks",
     description:
       "A multilingual AI tutor for LMS platforms — supporting English, Hindi, and Nepali — that teaches, quizzes, and evaluates students automatically",
-    image: "/cognora.png",
+    image: "/cognora.jpg",
     detailsLabel: "Architecture:",
     details: [
       "4-service system: Next.js frontend, FastAPI backend, dedicated worker, and Redis as the job queue",
